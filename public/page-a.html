@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page A</title>
+</head>
+<body>
+
+<header is="header-view" :show-menu=true></header>
+
+<div is="page-view">
+    <h1>{{ title }}</h1>
+    <input type="text" v-model="inputValue">
+    <div v-if="error" style="color: red;">{{ error }}</div>
+</div>
+
+<script>
+    var DATA = {
+        'menu': ['/'],
+        'title': 'Page A',
+        'error': 'サーバからのエラー'
+    }
+</script>
+<script src="/js/vendor.js"></script>
+<script src="/js/page-a.js"></script>
+</body>
+</html>

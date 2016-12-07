@@ -1,0 +1,11 @@
+<header>
+  <a @click="showMenu = !showMenu">
+    <span v-show="!showMenu">▼</span>
+    <span v-show="showMenu">▲</span>
+  </a>
+  <ul v-show="showMenu">
+    <li v-for="link in menu">
+      <a :href="link" v-text="link" />
+    </li>
+  </ul>
+</header>
